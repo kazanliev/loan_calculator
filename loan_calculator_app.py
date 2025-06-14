@@ -14,6 +14,7 @@ if P0 and R and N:
     n = int(N * 12)
     r = R / 12
     M = P0 * (r * (1 + r)**n) / ((1 + r)**n - 1)
+    total_sum  = n*M
 
     st.markdown("---")
     st.subheader("💰 Обобщение")
@@ -21,6 +22,7 @@ if P0 and R and N:
     st.write(f"**Лихва:** {R * 100:.2f} %")
     st.write(f"**Срок:** {n} месеца")
     st.write(f"**Месечна вноска:** {M:.2f} {currency}")
+    st.write(f"**Обща сума за плащане:** {total_sum:.2f} {currency}")
     st.markdown("---")
 
     # Table generation

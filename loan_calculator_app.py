@@ -22,7 +22,7 @@ if P0 and R and N:
     st.write(f"**Лихва:** {R * 100:.2f} %")
     st.write(f"**Срок:** {n} месеца")
     st.write(f"**Месечна вноска:** {M:.2f} {currency}")
-    st.write(f"**Обща сума за плащане:** {total_sum:.2f} {currency}")
+    st.write(f"**Обща сума за плащане (без такси):** {total_sum:.2f} {currency}")
     st.write(f"**Обща стойност на платените лихви:** {total_sum - P0:.2f} {currency}")
     st.markdown("---")
 

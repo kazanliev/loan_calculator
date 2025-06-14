@@ -4,7 +4,7 @@ import pandas as pd
 st.title("📊 Кредитен калкулатор")
 
 # User Inputs
-currency = st.text_input("Валутата (напр. BGN, EUR)", "BGN")
+currency = st.text_input("Валута (напр. BGN, EUR)", "BGN")
 P0 = st.number_input("Първоначална главница", min_value=0.0, step=100.0, format="%.2f")
 R = st.number_input("Годишна лихва (%)", min_value=0.0, format="%.2f") / 100
 N = st.number_input("Срок (в години)", min_value=1, step=1)

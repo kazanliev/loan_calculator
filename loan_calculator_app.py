@@ -32,18 +32,21 @@ if P0 and R and N:
     balance = P0
 
     for i in range(1, n + 1):
-        interest = round(balance * r, 2)
-        principal = round(M - interest, 2)
-        end_balance = round(balance - principal, 2)
+        interest = balance * r
+        principal = M - interest
+
+        end_balance = balance - principal
+
         total_interest += interest
 
+        # Store/display values rounded to 2 digits
         data.append({
             "Месец": i,
-            "Стартова Главница": balance,
-            "Платена лихва": interest,
-            "Вноска": M,
-            "Крайна Главница": end_balance,
-            "Натрупана Лихва": total_interest
+            "Стартова Главница": round(balance, 2),
+            "Платена лихва": round(interest, 2),
+            "Вноска": round(M, 2),
+            "Крайна Главница": round(end_balance, 2),
+            "Натрупана Лихва": round(total_interest, 2)
         })
 
         balance = end_balance

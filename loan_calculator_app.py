@@ -55,10 +55,4 @@ if P0 and R and N:
     st.subheader("📅 План за погасяване")
     st.dataframe(df.style.format({col: "{:.2f}" for col in df.columns if df[col].dtype != 'int'}), use_container_width=True)
 
-    # File export
-    st.markdown("---")
-    if st.button("💾 Запиши в Excel файл"):
-        excel_path = "loan_schedule.xlsx"
-        df.to_excel(excel_path, index=False, engine='openpyxl')
-        st.success(f"Файлът е запазен като `{excel_path}`")
 

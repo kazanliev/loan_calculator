@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("📊 Loan Calculator")
+st.title("📊 Кредитен калкулатор")
 
 # User Inputs
 currency = st.text_input("Валутата (напр. BGN, EUR)", "BGN")
@@ -54,5 +54,8 @@ if P0 and R and N:
     df = pd.DataFrame(data)
     st.subheader("📅 План за погасяване")
     st.dataframe(df.style.format({col: "{:.2f}" for col in df.columns if df[col].dtype != 'int'}), use_container_width=True)
+
+
+
 
 
